@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.hcl</groupId>
 	<artifactId>rubikbank</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>rubikbank</name>
 	<description>Demo project for Spring Boot</description>
@@ -82,7 +82,7 @@
         <connection>scm:https://github.com/lakshmi94u/rubik_backend.git</connection>
     <developerConnection>scm:git:https://lakshmi94u:devops0523@github.com/lakshmi94u/rubik_backend.git</developerConnection>
     <url>https://github.com/lakshmi94u/rubik_backend.git</url>
-    <tag>v0.0.3</tag>
+    <tag>HEAD</tag>
   </scm>
 <distributionManagement>
 	         <snapshotRepository>
