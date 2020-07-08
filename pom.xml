@@ -80,12 +80,23 @@
 			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
 	</dependencies>
+	 <scm>
+        <connection>scm:https://github.com/lakshmi94u/rubik_backend.git</connection>
+    <developerConnection>scm:git:https://lakshmi94u:devops0523@github.com/lakshmi94u/rubik_backend.git</developerConnection>
+    <url>https://github.com/lakshmi94u/rubik_backend.git</url>
+    <tag>HEAD</tag>
+  </scm>
 <distributionManagement>
-  <snapshotRepository>
-    <id>nexus</id>
-    <url>http://54.80.114.163:8081/nexus/content/repositories/snapshots/</url>
-  </snapshotRepository>
-</distributionManagement>
+	         <snapshotRepository>
+		 <id>nexus</id>
+		<url>http://172.31.63.131:8081/nexus/content/repositories/snapshots</url>
+		 </snapshotRepository> 
+			  <repository>
+			<id>nexus</id>
+			<url>http://172.31.63.131:8081/nexus/content/repositories/releases</url>
+	               </repository>
+		
+	</distributionManagement>
 	<build>
 		<plugins>
 			<plugin>
@@ -112,6 +123,14 @@
 					</execution>
 				</executions>
 			</plugin>
+				<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <configuration>
+                <tagNameFormat>v@{project.version}</tagNameFormat>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 
